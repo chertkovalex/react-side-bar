@@ -61,7 +61,7 @@ export default class SideBar extends Component {
         this.setState({sortingAsc: !this.state.sortingAsc});
         const sortingAsc = this.state.sortingAsc;
         const result = this.state.dataArr.sort((a, b) => {
-                return sortingAsc ? ( b.updated - a.updated ) : ( a.updated - b.updated);
+                return sortingAsc ? (b.updated - a.updated) : (a.updated - b.updated);
             }
         );
         this.updateDataArr(result);
@@ -72,9 +72,9 @@ export default class SideBar extends Component {
         const items = this.state.dataArr;
 
         const itemsTemplate = items.map((item) => {
-            const {itemId} = item;
+            const itemId = item.id;
             return (
-                <li key={itemId} class="sidebar-item">
+                <li key={itemId} className="sidebar-item">
                     <SideBarItem {...item}/>
                 </li>
             );
