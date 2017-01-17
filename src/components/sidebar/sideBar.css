@@ -1,0 +1,57 @@
+.sb-items {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.sb-items > li {
+    list-style: none;
+}
+
+.sb-item {
+    font-size: 12px;
+    text-align: left;
+    clear: both;
+    border-bottom: 1px solid lightgray;
+    height: 53px;
+    line-height: 26px;
+}
+
+.sb-items > li:first-child > .sb-item {
+    border-top: 1px solid lightgray;
+}
+
+.sb-item-left {
+    float: left;
+    display: inline-block;
+    width: 75%;
+}
+
+.sb-item-right {
+    float: right;
+    display: inline-block;
+    width: 25%;
+}
+
+.sb-name {
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.sb-type {
+    display: inline-block;
+}
+
+.sb-location {
+    display: inline-block;
+    margin-left: 7px;
+}
+
+.sb-header {
+
+}
+
+.sb-header h3 {
+    float: left;
+    margin: 10px;
+}
