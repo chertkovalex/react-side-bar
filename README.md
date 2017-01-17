@@ -4,11 +4,12 @@ The aim of this project is to create sidebar using React
 All related files are in /src/components/sidebar
 - instructions.md - task description
 - sidebar.png - sample look
+
 Other files in this directory are related to task solution
 
 - sidebar.json - the data file is placed in /public directory
 
-## Original info
+## ORIGINAL INFO
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
