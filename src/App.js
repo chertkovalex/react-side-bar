@@ -12,8 +12,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+        <Sidebar />
         <p className="App-intro">
-            <Sidebar />
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
