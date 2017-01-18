@@ -36,13 +36,11 @@ export default class SideBar extends Component {
 
     loadOriginalData = () => {
         this.setState({filterValue: ''});
-        let sb = this;
         fetch('./sidebar.json')
-            .then(function (response) {
-                return response.json();
-            }).then(function (json) {
-            sb.setState({dataArr: json, originalData: json});
-        }).catch(function (ex) {
+            .then(response => response.json())
+            .then((json) => {
+                this.setState({dataArr: json, originalData: json});
+            }).catch((ex) => {
             console.log('parsing failed', ex);
         });
     };
@@ -90,10 +88,10 @@ export default class SideBar extends Component {
                         onTouchTap={this.handleToggle}
                     />
                     <Drawer width={250} open={this.state.open}>
-                        <SideBarHeader reports={reports} onClose={this.handleToggle.bind(this)}
-                                       onRefresh={this.loadOriginalData.bind(this)}/>
-                        <SideBarFilter onFilterInput={this.setFilteredArray.bind(this)}
-                                       onSortChange={this.toggleSorting.bind(this)}
+                        <SideBarHeader reports={reports} onClose={this.handleToggle}
+                                       onRefresh={this.loadOriginalData}/>
+                        <SideBarFilter onFilterInput={this.setFilteredArray}
+                                       onSortChange={this.toggleSorting}
                                        filterValue={this.state.filterValue}/>
                         <Divider />
                         <ul className="sb-items">

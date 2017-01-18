@@ -13,7 +13,7 @@ export default class SideBarItem extends Component {
         const ampm = dateObj.getHours() >= 12 ? 'PM' : 'AM';
         const hours = dateObj.getHours() > 12 ? dateObj.getHours() % 12 : dateObj.getHours();
         const minutes = dateObj.getMinutes() < 10 ? '0' + dateObj.getMinutes() : dateObj.getMinutes();
-        return hours + ':' + minutes + ' ' + ampm;
+        return `${hours}:${minutes} ${ampm}`;
     };
 
     render() {
